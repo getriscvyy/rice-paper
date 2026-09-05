@@ -9,3 +9,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.fillchars = { eob = " " }
 
+vim.g.vimtex_view_method = "zathura"
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
