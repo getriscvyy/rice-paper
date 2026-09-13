@@ -1,70 +1,69 @@
-// -*- mode: jsonc -*-
 {
     "height": 20,
-    "spacing": 5,
-    "margin-left": 5,
-    "margin-right": 5,
-    "margin-top": 5,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 10,
 
     "layer": "top",
-    "mode": "dock",
-    "modifier-reset": "press",
-    "exclusive": true,
-    "passthrough": false,
     "position": "top",
+    "exclusive": true,
 
     "modules-left": [
-        "cpu",
-        "memory",
-	"disk",
-        "temperature"
+        "hyprland/workspaces",
+        "mpris"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "clock"
     ],
     "modules-right": [
-	"battery",
+        "memory",
         "pulseaudio",
-        "network",
-        "clock#date",
-	"clock#time"
+	"network",
+        "temperature",
+        "battery"
     ],
 
     "hyprland/workspaces": {
-        "format": "{icon}" 
-    },
-
-    "clock#date": {
-    	"format": "📅 {:%Y-%m-%d}",
-    	"tooltip-format": "{:%Y-%m-%d}"
-    },
-
-    "clock#time": {
-    	"format": "⏰ {:%H:%M}",
-	"tooltip-format": "{:%H:%M:%S}"
-    },
-
-    "cpu": {
-        "format": "󰍛 {usage}%",
-        "tooltip": false
-    },
-
-    "memory": {
-        "format": "\uefc5  {used}GiB / {total}GiB"
-    },
-
-    "disk": {
-	"interval": 30,
-	"paths": ["/"],
-	"format": "💾 {used} / {total}",
-	"unit": "GB"
+        "format": "{name}",
+        "on-click": "activate"
     },
 
     "network": {
-        "format-wifi": "\uf1eb  {essid}",
-        "format-ethernet": "󰊗  {ipaddr}",
-        "format-disconnected": "⚠ Disconnected",
+        "format-wifi": "NET <span color='#d3c6aa'>{essid}</span>",
+        "format-ethernet": "NET <span color='#d3c6aa'>{ipaddr}</span>",
+	"format-disconnected": "NET <span color='#d3c6aa'>OFF</span>",
 	"on-click": "kitty nmtui"
+    },
+
+    "mpris": {
+        "format": " {artist} <span color='#d3c6aa'>{title}</span>",
+        "max-length": 40
+    },
+
+    "memory": {
+        "format": "RAM <span color='#d3c6aa'>{used:0.1f}</span>",
+        "tooltip": "RAM {used:0.1f}"
+    },
+
+    "pulseaudio": {
+        "format": "VOL <span color='#d3c6aa'>{volume}</span>",
+        "format-muted": "VOL <span color='#d3c6aa'>OFF</span>",
+        "format-icons": {
+            "default": [""]
+        },
+        "scroll-step": 1,
+        "on-click": "kitty pulsemixer"
+    },
+
+    "temperature": {
+        "format": "TMP <span color='#d3c6aa'>{temperatureC}</span>",
+        "critical-threshold": 80
+    },
+
+    "clock": {
+        "format": "{:%Y %b %d <span color='#d3c6aa'>%H:%M</span>}",
+        "tooltip-format": "{:%Y-%m-%d  %H:%M:%S}"
     },
 
     "battery": {
@@ -73,59 +72,6 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity}%",
-        
-        "format-icons": ["", "", "", "", ""],
-        "max-length": 25
-    },
-
-     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
-        // "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C ",
-        "format": " {temperatureC}°C"
-    },
-
-    "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-bluetooth": "{icon}  {volume}%",
-        "format-muted": "",
-        "format-icons": {
-            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
-            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
-            "headphone": "",
-            "hands-free": "󰂑",
-            "headset": "󰂑",
-            "phone": "",
-            "phone-muted": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
-        },
-        "scroll-step": 1,
-        "on-click": "kitty pulsemixer"
-    },
-
-    "cava": {
-	//"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
-	"framerate": 30,
-	"autosens": 1,
-	//"sensitivity": 100,
-	"bars": 14,
-	"lower_cutoff_freq": 50,
-	"higher_cutoff_freq": 10000,
-	"method": "pulse",
-	"source": "auto",
-	"stereo": true,
-	"reverse": false,
-	"monstercat": false,
-	"waves": false,
-	"noise_reduction": 0.77,
-	"input_delay": 2,
-	"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-	"actions": {
-		"on-click-right": "mode"
-	}
+        "format": "BAT <span color='#d3c6aa'>{capacity}</span>"
     }
 }

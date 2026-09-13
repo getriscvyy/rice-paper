@@ -9,11 +9,10 @@ hl.bind(mod .. " + F", hl.dsp.exec_cmd(browser))
 hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd(editor))
 
 -- System Power Controls
-hl.bind(mod .. " + CTRL + S", hl.dsp.exec_cmd("systemctl poweroff"))                -- Shutdown
-hl.bind(mod .. " + CTRL + R", hl.dsp.exec_cmd("systemctl reboot"))                  -- Reboot
-hl.bind(mod .. " + CTRL + Z", hl.dsp.exec_cmd("systemctl suspend"))                 -- Sleep (zzz)
-hl.bind(mod .. " + CTRL + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")) -- logout
-hl.bind(mod .. " + CTRL + L", hl.dsp.exec_cmd("hyprlock"))                          -- Lock
+hl.bind(mod .. " + CTRL + S", hl.dsp.exec_cmd("systemctl poweroff"))
+hl.bind(mod .. " + CTRL + R", hl.dsp.exec_cmd("systemctl reboot"))
+hl.bind(mod .. " + CTRL + Z", hl.dsp.exec_cmd("systemctl suspend"))
+hl.bind(mod .. " + CTRL + L", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 
 -- Window management + Vim bindings
 -- Move focus

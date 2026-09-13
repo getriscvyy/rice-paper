@@ -1,22 +1,22 @@
 hl.config{
 	general = {
 		border_size = 2,
-		gaps_in = 5,
-		gaps_out = 5,
+		gaps_in = 10,
+		gaps_out = 20,
 		col = {
-			inactive_border = 0xeeb4befe,
-			active_border = 0xffcba6f7,
+			inactive_border = 0xff1e2326,
+			active_border = 0xffa7c080,
 		},
 	},
 
 	decoration = {
-		rounding = 10,
+		rounding = 5,
 		dim_inactive = true,
 		dim_strength = 0.1,
 		blur = {
 			enabled = true,
-			passes = 3,
-			vibrancy = 0.6,
+			vibrancy = 0.2,
+			passes = 2,
 		},
 	},
 
@@ -26,8 +26,14 @@ hl.config{
 		touchpad = {
 			natural_scroll = true,
 			scroll_factor = 0.25,
-
 			tap_to_click = false,
 		},
 	},
 }
+
+hl.layer_rule({
+  match = { namespace = "wofi" },
+  blur = true,
+  ignore_alpha = 0.5,
+})
+

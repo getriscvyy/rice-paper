@@ -7,7 +7,7 @@ vim.pack.add({
   "https://github.com/MunifTanjim/nui.nvim",
   "https://github.com/nvim-tree/nvim-web-devicons",
   "https://github.com/lervag/vimtex",
-  "https://github.com/catppuccin/nvim",
+  "https://github.com/neanias/everforest-nvim",
 })
 
 require('neo-tree').setup {
@@ -20,17 +20,13 @@ require('neo-tree').setup {
   },
 }
 
-require('catppuccin').setup {
-  flavour = 'mocha',
-  transparent_background = true,
-  integrations = {
-    neotree = true,
-  },
-}
+require("everforest").setup({
+	transparent_background_level = 1,
+})
 
-vim.cmd.colorscheme('catppuccin')
+vim.cmd.colorscheme('everforest')
 
-local mauve = '#cba6f7' -- mocha; swap per your flavour
+local mauve = '#a7c080'
 
 vim.api.nvim_set_hl(0, 'NeoTreeDirectoryName', { fg = mauve })
 vim.api.nvim_set_hl(0, 'NeoTreeDirectoryIcon', { fg = mauve })
