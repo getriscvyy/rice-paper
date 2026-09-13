@@ -1,105 +1,41 @@
 // ~/.config/fastfetch/config.jsonc
-//
-// Catppuccin Mocha rice — Mauve frames with Lavender module keys.
-
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 
-  // ---------------------------------------------------------------------
-  // LOGO
-  // ---------------------------------------------------------------------
   "logo": {
     "source": "~/.config/fastfetch/arch.txt",
     "color": {
-	"1": "#cba6f7",
-	"2": "#b4befe"
+      "1": "#a7c080",
+      "2": "#d3c6aa"
     },
     "padding": {
-	"top": 1,
-	"right": 3
+      "top": 0,
+      "right": 3
     }
   },
 
-  // ---------------------------------------------------------------------
-  // GLOBAL DISPLAY SETTINGS
-  // ---------------------------------------------------------------------
   "display": {
     "separator": "  ",
     "color": {
-      "keys": "#b4befe", // global fallback to lavender
-      "title": "#b4befe"
+      "keys": "#a7c080",
+      "title": "#d3c6aa"
     },
     "percent": {
-      "type": ["num", "bar"]
+      "type": ["num"]
     }
   },
 
-  // ---------------------------------------------------------------------
-  // MODULES
-  // ---------------------------------------------------------------------
   "modules": [
-
-    // ---- SYSTEM -------------------------------------------------------
-    {
-      "type": "custom",
-      "format": "\u001b[1;38;2;203;166;247m╭─ SYSTEM ─────────────────────────────────────────────────╮\u001b[0m"
-    },
-    { "type": "title",    "key": "User  ", "keyColor": "#b4befe" },
-    { "type": "os",       "key": "OS    ", "keyColor": "#b4befe", "format": "{pretty-name}" },
-    { "type": "host",     "key": "Host  ", "keyColor": "#b4befe", "format": "{family}" },
-    { "type": "kernel",   "key": "Kernel", "keyColor": "#b4befe", "format": "{sysname}" }, 
-    { "type": "packages", "key": "Pkgs  ", "keyColor": "#b4befe", "format": "{all}" },
-    { "type": "uptime",   "key": "Uptime", "keyColor": "#b4befe" },
-    { "type": "shell",    "key": "Shell ", "keyColor": "#b4befe", "format": "{pretty-name}" },
-    { "type": "terminal", "key": "Term  ", "keyColor": "#b4befe", "format": "{pretty-name}" },
-    {
-      "type": "custom",
-      "format": "\u001b[1;38;2;203;166;247m╰──────────────────────────────────────────────────────────╯\u001b[0m"
-    },
-    
-    // ---- HARDWARE -------------------------------------------------------
-    {
-      "type": "custom",
-      "format": "\u001b[1;38;2;203;166;247m╭─ HARDWARE ───────────────────────────────────────────────╮\u001b[0m"
-    },
-    { "type": "cpu",      "key": "CPU   ", "keyColor": "#b4befe", "format": "{name} | {cores-physical} @ {freq-max}" },
-    { "type": "gpu",      "key": "GPU   ", "keyColor": "#b4befe", "format": "{vendor} {name}" },
-    { "type": "memory",   "key": "Mem   ", "keyColor": "#b4befe", "format": "{percentage-bar} {used} / {total}" },
-    { "type": "disk",     "key": "Disk  ", "keyColor": "#b4befe", "format": "{size-percentage-bar} {size-used} / {size-total}" },
-    { "type": "battery",  "key": "Batt  ", "keyColor": "#b4befe", "format": "{capacity-bar} {capacity} | {status}" },
-    {
-      "type": "custom",
-      "format": "\u001b[1;38;2;203;166;247m╰──────────────────────────────────────────────────────────╯\u001b[0m"
-    },
-
-    // ---- DISPLAY --------------------------------------------------------
-    {
-      "type": "custom",
-      "format": "\u001b[1;38;2;203;166;247m╭─ DISPLAY ────────────────────────────────────────────────╮\u001b[0m"
-    },
-    {
-      "type": "display",
-      "key": "Disp  ",
-      "keyColor": "#b4befe",
-      "format": "{width}x{height} @ {refresh-rate}Hz"
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[1;38;2;203;166;247m╰──────────────────────────────────────────────────────────╯\u001b[0m"
-    },
-
-    // ---- DESKTOP --------------------------------------------------------
-    {
-      "type": "custom",
-      "format": "\u001b[1;38;2;203;166;247m╭─ DESKTOP ────────────────────────────────────────────────╮\u001b[0m"
-    },
-    { "type": "de",       "key": "DE    ", "keyColor": "#b4befe" },
-    { "type": "wm",       "key": "WM    ", "keyColor": "#b4befe", "format": "{pretty-name}" },
-    {
-      "type": "custom",
-      "format": "\u001b[1;38;2;203;166;247m╰──────────────────────────────────────────────────────────╯\u001b[0m"
-    },
-
-    "break"
+    { "type": "custom",   "key": "╭─ SYSTEM ─────────────────────────────────────────────────╮", "keyColor": "#a7c080" },
+    { "type": "title",    "key": "usr", "keyColor": "#a7c080"                                                          },
+    { "type": "os",       "key": "os ", "keyColor": "#a7c080", "format": "{pretty-name}"                               },
+    { "type": "host",     "key": "sys", "keyColor": "#a7c080", "format": "{family}"                                    },
+    { "type": "cpu",      "key": "cpu", "keyColor": "#a7c080", "format": "{name} | {cores-physical} @ {freq-max}"      },
+    { "type": "gpu",      "key": "gpu", "keyColor": "#a7c080", "format": "{vendor} {name}", "hideType": "integrated"   },
+    { "type": "memory",   "key": "ram", "keyColor": "#a7c080", "format": "{used} / {total}"                            },
+    { "type": "disk",     "key": "dsk", "keyColor": "#a7c080", "format": "{size-used} / {size-total}"                  },
+    { "type": "display",  "key": "dsp", "keyColor": "#a7c080", "format": "{width}x{height} @ {refresh-rate}Hz"         },
+    { "type": "wm",       "key": "wm ", "keyColor": "#a7c080", "format": "{pretty-name}"                               },
+    { "type": "custom",   "key": "╰──────────────────────────────────────────────────────────╯", "keyColor": "#a7c080" }
   ]
 }

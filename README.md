@@ -1,7 +1,7 @@
-# my catppuccin mocha dotfiles (hyprland)
+# my everforest dotfiles (hyprland)
 
 ## overview
-my rice themed around the catppuccin mocha color palette. includes fastfetch, hypr, kitty, mako, nvim, waybar, wofi, and yazi configs. also features oled saver mode (see **keybinds/default programs**) to disable static ui elements.
+my rice themed around the everforest color palette. includes fastfetch, hypr, kitty, mako, nvim, waybar, wofi, and yazi configs. also features oled saver mode (see **keybinds/default programs**) to disable static ui elements.
 
 ## defaults
 | program | default |
@@ -32,8 +32,7 @@ my rice themed around the catppuccin mocha color palette. includes fastfetch, hy
 | `super + ctrl + s` | shutdown |
 | `super + ctrl + r` | reboot |
 | `super + ctrl + z` | suspend (sleep) |
-| `super + ctrl + m` | logout |
-| `super + ctrl + l` | lock screen |
+| `super + ctrl + l` | logout |
 
 ### navigation & windows (vim binds)
 | keybind | action |

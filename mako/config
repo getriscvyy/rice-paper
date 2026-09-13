@@ -1,10 +1,7 @@
-# Colors
+background-color=#1e2326
+text-color=#d3c6aa
+border-color=#a7c080
+border-radius=5
 
-background-color=#1e1e2e
-text-color=#cdd6f4
-border-color=#cba6f7
-progress-color=over #313244
-border-radius=10
+font=Iosevka Nerd Font Mono 12
 
-[urgency=high]
-border-color=#fab387

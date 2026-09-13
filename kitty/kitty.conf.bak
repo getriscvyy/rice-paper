@@ -1,9 +1,0 @@
-term xterm-256color
-
-clipboard_control write-clipboard write-primary read-clipboard read-primary
-
-window_padding_width 0
-
-sync_to_monitor yes
-
-background_opacity 0.85

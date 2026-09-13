@@ -1,111 +1,49 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "JetBrains Mono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-family: "Iosevka Mono", "DejaVu Sans Mono", monospace;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0);
-    border-bottom: 3px solid rgba(100, 114, 125, 0);
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
-}
-
-window#waybar.hidden {
-    opacity: 1;
+    background-color: #1e2326;
+    opacity: 0.95;
+    color: #a7c080;
 }
 
 #workspaces button {
-    padding: 0;
-    min-width: 25px;
-    min-height: 25px;
-    margin: 4px;
-    background-color: #1e1e2e;
-    opacity: 0.5;
-    color: #ffffff;
-    border: 2px solid #b4befe;
-    border-radius: 100%;
+    padding: 0 8px;
+    color: #a7c080;
+    background-color: transparent;
 }
 
-#workspaces button.focused, #workspaces button.active {
-    background-color: #1e1e2e;
-    color: #ffffff;
-    border: 2px solid #cba6f7;
-    opacity: 0.75;
+#workspaces button.active {
+    background-color: #a7c080;
+    color: #1e2326;
+    font-weight: bold;
 }
 
-#workspaces {
-    margin: 0 4px;
+#workspaces button:hover {
+    background-color: #323c41;
+    color: #a7c080;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+#mpris {
+    color: #a7c080;
+    padding-right: 8px;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
-/* Unified pill style for the status modules actually in use:
-   cpu, memory, network, temperature, pulseaudio, battery, clock, custom/power.
-   Same height as workspace buttons, rounded rectangle,
-   base color #1e1e2e @ 75% opacity, cba6f7 border */
-#cpu,
 #memory,
-#disk,
-#network,
-#temperature,
 #pulseaudio,
-#battery,
+#temperature,
 #clock,
-#custom-power {
-    margin: 4px;
-    padding: 0 10px;
-    min-height: 25px;
-    background-color: rgba(30, 30, 46, 0.75); /* #1e1e2e @ 75% */
-    color: #ffffff;
-    border: 2px solid #cba6f7;
-    border-radius: 10px;
+#battery { padding: 0 8px;
+    color: #a7c080;
 }
 
-#battery.charging, #battery.plugged {
-    color: #ffffff;
-    border-color: #a6e3a1;
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
-/* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f38ba8;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    color: #e67e80;
 }
 
-label:focus {
-    background-color: #000000;
-}
-
-#network.disconnected {
-    border-color: #f38ba8;
-}
-
-#pulseaudio.muted {
-    border-color: #f38ba8;
-}
-
-#temperature.critical {
-     border-color: #f38ba8;
-}
