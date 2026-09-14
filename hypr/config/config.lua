@@ -32,8 +32,30 @@ hl.config{
 }
 
 hl.layer_rule({
-  match = { namespace = "wofi" },
-  blur = true,
-  ignore_alpha = 0.5,
+	match = { namespace = "wofi" },
+	blur = true,
+	ignore_alpha = 0.5,
+})
+
+hl.gesture({
+	fingers = 3,
+	direction = "horizontal",
+	action = "workspace"
+})
+
+hl.curve(
+	"curvy",
+	{
+		type = "spring",
+		mass = 1,
+		stiffness = 2000,
+		dampening = 100
+})
+
+hl.animation({
+	leaf = "global",
+	enabled = true,
+	spring = "curvy",
+	speed = 1,
 })
 

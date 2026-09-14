@@ -1,7 +1,7 @@
 require("config.defaults")
 require("config.keybinds")
 require("config.monitors")
-require("config.decoration")
+require("config.config")
 
 hl.config({
   input = {
