@@ -7,3 +7,6 @@ vim.g.vimtex_indent_enabled = false
 vim.g.vimtex_compiler_latexmk = {
 	continuous = 1,
 }
+
+vim.g.vimtex_quickfix_mode = 2
+
