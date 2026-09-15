@@ -6,8 +6,7 @@ hl.config{
 		col = {
 			inactive_border = 0xff1e2326,
 			active_border = 0xffa7c080,
-		},
-	},
+		}, },
 
 	decoration = {
 		rounding = 5,
@@ -48,7 +47,7 @@ hl.curve(
 	{
 		type = "spring",
 		mass = 1,
-		stiffness = 2000,
+		stiffness = 1000,
 		dampening = 100
 })
 
