@@ -47,7 +47,7 @@ hl.curve(
 	{
 		type = "spring",
 		mass = 1,
-		stiffness = 1000,
+		stiffness = 2000,
 		dampening = 100
 })
 
