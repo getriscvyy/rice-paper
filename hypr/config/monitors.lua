@@ -48,7 +48,7 @@ hl.bind("switch:on:Lid Switch", function()
     if external_connected() then
         hl.monitor({ output = "eDP-1", disabled = true })
     else
-	hl.exec_cmd("systemctl suspend")
+	hl.exec_cmd("systemctl poweroff")
     end
 end, { locked = true })
 

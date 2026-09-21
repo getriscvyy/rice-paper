@@ -24,7 +24,7 @@ my rice themed around the everforest color palette. includes fastfetch, hypr, ki
 | `super + d` | application launcher |
 | `super + f` | browser |
 | `super + return` | text editor |
-| `super + g` | disable static ui |
+| `super + b` | disable static ui |
 
 ### power controls
 | keybind | action |
@@ -45,7 +45,7 @@ my rice themed around the everforest color palette. includes fastfetch, hypr, ki
 | `super + [/]` | focus prev / next workspace |
 | `super + shift + [/]` | move window to prev / next workspace |
 | `super + tab` | focus next non-empty workspace |
-| `super + shift + tab` | focus previous non-empty workspace |
+| `super + shift + tab` | move window to next relative workspace |
 
 ### screenshot submap
 `super + shift + s` to enter submap:
