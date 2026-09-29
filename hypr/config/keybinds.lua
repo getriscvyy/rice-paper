@@ -74,13 +74,13 @@ hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_S
 hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), {locked = true, repeating = true})
 hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), {locked = true, repeating = true})
 
--- External keyboard (vim-style HJKL pad: H/L = seek track, J/K = volume, V = mute)
+-- External keyboard (vim-style HJKL pad: H/L = seek track, J/K = volume, M = mute)
 hl.bind("ALT + X", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true, repeating = true })
 hl.bind("ALT + H", hl.dsp.exec_cmd("playerctl previous"), { locked = true, repeating = true })
 hl.bind("ALT + L", hl.dsp.exec_cmd("playerctl next"), { locked = true, repeating = true })
 hl.bind("ALT + K", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
 hl.bind("ALT + J", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { locked = true, repeating = true })
-hl.bind("ALT + V", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true, repeating = true })
+hl.bind("ALT + M", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true, repeating = true })
 
 -- OLED-friendly mode
 local border_enabled = true
