@@ -97,3 +97,7 @@ hl.bind(mod .. " + G", function()
 		hl.dispatch(hl.dsp.exec_cmd([[hyprctl eval 'hl.config({ general = { border_size = 0 } })']]))
 	end
 end)
+
+-- Reload Waybar
+hl.bind(mod .. " + W", hl.dsp.exec_cmd("killall waybar; waybar >/dev/null 2>&1 & disown"))
+

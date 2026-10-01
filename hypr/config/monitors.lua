@@ -19,7 +19,7 @@ hl.device({
     enabled = false,
 })
 
--- Fix XWayland scaling but
+-- Fix XWayland scaling bug
 hl.config({ xwayland = { force_zero_scaling = true }})
 
 -- Is the external monitor currently connected?
@@ -48,7 +48,7 @@ hl.bind("switch:on:Lid Switch", function()
     if external_connected() then
         hl.monitor({ output = "eDP-1", disabled = true })
     else
-	hl.exec_cmd("systemctl poweroff")
+	hl.exec_cmd("systemctl suspend")
     end
 end, { locked = true })
 
