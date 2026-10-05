@@ -9,7 +9,7 @@ hl.config{
 		}, },
 
 	decoration = {
-		rounding = 5,
+		rounding = 20,
 		dim_inactive = true,
 		dim_strength = 0.1,
 		blur = {
