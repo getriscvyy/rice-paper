@@ -14,8 +14,8 @@ hl.config{
 		dim_strength = 0.1,
 		blur = {
 			enabled = true,
-			vibrancy = 0.2,
-			passes = 2,
+			vibrancy = 0.5,
+			passes = 3,
 		},
 	},
 
