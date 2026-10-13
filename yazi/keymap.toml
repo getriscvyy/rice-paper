@@ -1,0 +1,5 @@
+[[mgr.prepend_keymap]]
+on   = [ "g", "p" ]
+run  = "cd ~/Projects"
+desc = "Go to ~/Projects"
+

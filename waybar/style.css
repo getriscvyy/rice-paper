@@ -8,15 +8,49 @@
 }
 
 window#waybar {
-    background-color: #1e2326;
-    opacity: 0.95;
+    background-color: transparent;
     color: #a7c080;
+}
+
+#workspaces,
+#mpris,
+#memory,
+#pulseaudio,
+#temperature,
+#network,
+#clock,
+#battery {
+    background-color: rgba(30, 35, 38, 0.5);
+    border: 1px solid rgba(167, 192, 128, 0.75);
+    border-radius: 8px;
+    padding: 3px 10px;
+    margin: 4px 3px;
+    color: #a7c080;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces:hover,
+#mpris:hover,
+#memory:hover,
+#pulseaudio:hover,
+#temperature:hover,
+#clock:hover,
+#battery:hover {
+    border-color: rgba(167, 192, 128, 0.4);
+    background-color: rgba(30, 35, 38, 0.85);
+}
+
+#workspaces {
+    padding: 2px 4px;
 }
 
 #workspaces button {
     padding: 0 8px;
+    margin: 2px 2px;
     color: #a7c080;
     background-color: transparent;
+    border-radius: 6px;
+    transition: all 0.2s ease;
 }
 
 #workspaces button.active {
@@ -31,19 +65,16 @@ window#waybar {
 }
 
 #mpris {
-    color: #a7c080;
-    padding-right: 8px;
+    padding-right: 10px;
 }
 
-#memory,
-#pulseaudio,
-#temperature,
-#clock,
-#battery { padding: 0 8px;
+#battery.charging, 
+#battery.plugged {
     color: #a7c080;
 }
 
 #battery.critical:not(.charging) {
+    background-color: rgba(230, 126, 128, 0.2);
+    border-color: rgba(230, 126, 128, 0.6);
     color: #e67e80;
 }
-

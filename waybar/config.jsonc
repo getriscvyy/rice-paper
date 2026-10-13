@@ -1,9 +1,9 @@
 {
-    "height": 20,
-    "margin-top": 0,
-    "margin-left": 0,
-    "margin-right": 0,
-    "spacing": 10,
+    "height": 28,
+    "margin-top": 2,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 8,
 
     "layer": "top",
     "position": "top",
@@ -19,7 +19,7 @@
     "modules-right": [
         "memory",
         "pulseaudio",
-	"network",
+        "network",
         "temperature",
         "battery"
     ],
@@ -32,8 +32,8 @@
     "network": {
         "format-wifi": "NET <span color='#d3c6aa'>{essid}</span>",
         "format-ethernet": "NET <span color='#d3c6aa'>{ipaddr}</span>",
-	"format-disconnected": "NET <span color='#d3c6aa'>OFF</span>",
-	"on-click": "kitty nmtui"
+        "format-disconnected": "NET <span color='#d3c6aa'>OFF</span>",
+        "on-click": "kitty nmtui"
     },
 
     "mpris": {
@@ -49,9 +49,6 @@
     "pulseaudio": {
         "format": "VOL <span color='#d3c6aa'>{volume}</span>",
         "format-muted": "VOL <span color='#d3c6aa'>OFF</span>",
-        "format-icons": {
-            "default": [""]
-        },
         "scroll-step": 1,
         "on-click": "kitty pulsemixer"
     },

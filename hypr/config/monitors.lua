@@ -16,7 +16,7 @@ hl.monitor({
 
 hl.device({
     name = "wacom-hid-53dd-finger",
-    enabled = false,
+    enabled = true,
 })
 
 -- Fix XWayland scaling bug

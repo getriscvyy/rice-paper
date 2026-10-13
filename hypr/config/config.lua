@@ -1,22 +1,22 @@
 hl.config{
 	general = {
-		border_size = 2,
-		gaps_in = 10,
-		gaps_out = 20,
+		border_size = 1,
+		gaps_in = 5,
+		gaps_out = 10,
 		col = {
-			inactive_border = 0xff1e2326,
-			active_border = 0xffa7c080,
+			active_border = 0xefa7c080,
+			inactive_border = 0xafa7c080,
 		}, },
 
 	decoration = {
-		rounding = 20,
+		rounding = 8,
 		dim_inactive = true,
 		dim_strength = 0.1,
 		blur = {
-			enabled = true,
 			vibrancy = 0.5,
-			passes = 3,
-		},
+			passes = 2,
+			enabled = true,
+		}
 	},
 
 	input = {
@@ -32,6 +32,12 @@ hl.config{
 
 hl.layer_rule({
 	match = { namespace = "wofi" },
+	blur = true,
+	ignore_alpha = 0.5,
+})
+
+hl.layer_rule({
+	match = { namespace = "waybar" },
 	blur = true,
 	ignore_alpha = 0.5,
 })

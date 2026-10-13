@@ -4,8 +4,8 @@
 }
 window {
   /* Hex #1e2326 converted to RGBA (30, 35, 38) */
-  background-color: rgba(30, 35, 38, 0.75);
-  border-radius: 10px;
+  background-color: rgba(30, 35, 38, 0.5);
+  border-radius: 5px;
 }
 #scroll {
   background-color: transparent;
@@ -13,8 +13,8 @@ window {
 #outer-box {
   background-color: transparent;
   padding: 10px;
-  border: 2px solid #a7c080; /* Accent Green */
-  border-radius: 10px;
+  border: 1px solid #a7c080; /* Accent Green */
+  border-radius: 5px;
 }
 #main {
   background-color: transparent;
@@ -37,13 +37,13 @@ scrollbar slider {
 }
 #input {
   /* Hex #323c41 converted to RGBA (50, 60, 65) */
-  background-color: rgba(50, 60, 65, 0.6); 
+  background-color: rgba(50, 60, 65, 0.3); 
   color: #d3c6aa; /* Tan Text */      
   caret-color: #a7c080;
-  border: 1px solid #323c41; 
+  border: 1px solid #a7c080; 
   padding: 8px 12px;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   outline: 1px solid #a7c080;
 }
 #input:focus {
@@ -57,15 +57,15 @@ scrollbar slider {
   color: #d3c6aa;
 }
 #entry #entry:selected {
-  background-color: rgba(50, 60, 65, 0.8);
+  background-color: rgba(50, 60, 65, 0.3);
   color: #a7c080;
 }
 #entry:selected {
-  background-color: rgba(50, 60, 65, 0.8);
+  background-color: rgba(50, 60, 65, 0.3);
   color: #a7c080;
 }
 #entry:hover {
-  background-color: rgba(50, 60, 65, 0.8); 
+  background-color: rgba(50, 60, 65, 0.3); 
 }
 #text {
   color: #d3c6aa; 
