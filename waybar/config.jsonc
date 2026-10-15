@@ -1,9 +1,9 @@
 {
-    "height": 28,
-    "margin-top": 2,
-    "margin-left": 10,
-    "margin-right": 10,
-    "spacing": 8,
+    "height": 25,
+    "margin-top": 3,
+    "margin-left": 2.5,
+    "margin-right": 2.5,
+    "spacing": 2.5,
 
     "layer": "top",
     "position": "top",
@@ -37,7 +37,7 @@
     },
 
     "mpris": {
-        "format": " {artist} <span color='#d3c6aa'>{title}</span>",
+        "format": "{artist} <span color='#d3c6aa'>{title}</span>",
         "max-length": 40
     },
 

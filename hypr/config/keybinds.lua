@@ -92,7 +92,7 @@ hl.bind(mod .. " + G", function()
 	-- 2. Toggle borders using hyprctl eval
 	border_enabled = not border_enabled
 	if border_enabled then
-		hl.dispatch(hl.dsp.exec_cmd([[hyprctl eval 'hl.config({ general = { border_size = 2 } })']]))
+		hl.dispatch(hl.dsp.exec_cmd([[hyprctl eval 'hl.config({ general = { border_size = 0 } })']]))
 	else
 		hl.dispatch(hl.dsp.exec_cmd([[hyprctl eval 'hl.config({ general = { border_size = 0 } })']]))
 	end
