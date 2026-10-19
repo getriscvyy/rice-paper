@@ -1,0 +1,9 @@
+{
+    "launcher": {
+        "enableDangerousActions": true,
+        "useFuzzy": {
+            "apps": true
+        },
+        "vimKeybinds": true
+    }
+}

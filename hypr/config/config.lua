@@ -11,7 +11,7 @@ hl.config{
 	decoration = {
 		rounding = 8,
 		dim_inactive = true,
-		dim_strength = 0.1,
+		dim_strength = 0.05,
 		blur = {
 			vibrancy = 0.5,
 			passes = 2,
@@ -21,6 +21,7 @@ hl.config{
 
 	input = {
 		sensitivity = 0.25,
+		accel_profile = "flat",
 
 		touchpad = {
 			natural_scroll = true,
